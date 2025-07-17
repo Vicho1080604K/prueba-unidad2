@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Iniciar Sesion";
+}
+
+<h2>Iniciar Sesión</h2>
+
+<form asp-action="Login" method="post">
+    <div class="form-group">
+        <label>Correo</label>
+        <input type="text" name="correo" class="form-control" required />
+    <div class="form-group">
+        <label>Contraseña</label>
+        <input type="password" name="contraseña" class="form-control" required />
+    </div>
+    <div>
+    <button type="submit" class="btn btn-primary">Entrar</button>
+</form>
+
+@if (ViewBag.Mensaje != null)
+{
+    <p class="text-danger">@ViewBag.Mensaje</p>
+}
